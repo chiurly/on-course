@@ -154,8 +154,8 @@
                         <Pane VBox.vgrow="ALWAYS" />
                         <HBox spacing="10.0">
                            <children>
-                              <Button mnemonicParsing="false" onAction="#onUpdateButtonClick" text="Update" />
-                              <Button mnemonicParsing="false" onAction="#onDeleteButtonClick" text="Delete" />
+                              <Button mnemonicParsing="false" onAction="#onUpdateUserButtonClick" text="Update" />
+                              <Button mnemonicParsing="false" onAction="#onDeleteUserButtonClick" text="Delete" />
                               <Pane HBox.hgrow="ALWAYS" />
                               <Button mnemonicParsing="false" onAction="#onSignOutButtonClick" text="Sign Out" />
                            </children>

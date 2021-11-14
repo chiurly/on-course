@@ -352,7 +352,7 @@ public class MainController implements Initializable {
     }
 
     @FXML
-    protected void onUpdateButtonClick() {
+    protected void onUpdateUserButtonClick() {
         User user = hibernateUser.get(SignInController.getSignedInUserId());
         boolean userIsPerson = user.getClass() == Person.class;
 
@@ -421,7 +421,7 @@ public class MainController implements Initializable {
     }
 
     @FXML
-    protected void onDeleteButtonClick() throws IOException {
+    protected void onDeleteUserButtonClick() throws IOException {
         ButtonType yes = new ButtonType("Yes", ButtonBar.ButtonData.YES);
         ButtonType no = new ButtonType("No", ButtonBar.ButtonData.NO);
 

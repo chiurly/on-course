@@ -34,7 +34,7 @@
       <HBox spacing="10.0">
          <children>
             <Button defaultButton="true" mnemonicParsing="false" onAction="#onUpdateButtonClick" text="Update" />
-            <Button mnemonicParsing="false" onAction="#onDeleteButtonClick" text="Delete" />
+            <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#onDeleteButtonClick" text="Delete" />
             <Button cancelButton="true" mnemonicParsing="false" onAction="#onCancelButtonClick" text="Cancel" />
          </children>
       </HBox>

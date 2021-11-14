@@ -3,6 +3,7 @@ package oncourse.oncourse.fxcontroller;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -22,6 +23,8 @@ public class EditFolderController implements Initializable {
     private TextField nameField;
     @FXML
     private DatePicker dateCreatedPicker;
+    @FXML
+    private Button deleteButton;
 
     private final EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("on_course");
     private final HibernateFolder hibernateFolder = new HibernateFolder(entityManagerFactory);
@@ -29,9 +32,12 @@ public class EditFolderController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         Folder selectedFolder = hibernateFolder.get(MainController.getSelectedFolderOrFileId());
+
         idField.setText(String.valueOf(selectedFolder.getId()));
         nameField.setText(selectedFolder.getName());
         dateCreatedPicker.setValue(selectedFolder.getDateCreated());
+
+        deleteButton.setDisable(selectedFolder.getRootOfCourse() != null);
     }
 
     @FXML
