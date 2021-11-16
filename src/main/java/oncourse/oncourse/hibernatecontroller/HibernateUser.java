@@ -50,7 +50,7 @@ public class HibernateUser {
         entityManager.close();
     }
 
-    public void remove(int id) {
+    public void delete(int id) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         User user = entityManager.getReference(User.class, id);
 

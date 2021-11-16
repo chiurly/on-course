@@ -48,7 +48,7 @@ public class HibernateFile {
         entityManager.close();
     }
 
-    public void remove(int id) {
+    public void delete(int id) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         File file = entityManager.getReference(File.class, id);
 

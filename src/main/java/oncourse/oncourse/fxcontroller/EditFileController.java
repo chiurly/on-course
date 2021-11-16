@@ -53,7 +53,7 @@ public class EditFileController implements Initializable {
 
     @FXML
     protected void onDeleteButtonClick() {
-        hibernateFile.remove(MainController.getSelectedFolderOrFileId());
+        hibernateFile.delete(MainController.getSelectedFolderOrFileId());
         closeWindow();
     }
 

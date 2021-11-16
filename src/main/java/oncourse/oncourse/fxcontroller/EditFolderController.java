@@ -59,7 +59,7 @@ public class EditFolderController implements Initializable {
 
     @FXML
     protected void onDeleteButtonClick() {
-        hibernateFolder.remove(MainController.getSelectedFolderOrFileId());
+        hibernateFolder.delete(MainController.getSelectedFolderOrFileId());
         closeWindow();
     }
 

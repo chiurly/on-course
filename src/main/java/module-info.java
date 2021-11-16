@@ -7,6 +7,11 @@ module oncourse.oncourse {
     requires mysql.connector.java;
     requires org.hibernate.orm.core;
 
+    requires spring.core;
+    requires spring.context;
+    requires spring.web;
+    requires com.google.gson;
+
 
     opens oncourse.oncourse to javafx.fxml;
     exports oncourse.oncourse;

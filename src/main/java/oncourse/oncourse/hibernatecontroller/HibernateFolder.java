@@ -49,7 +49,7 @@ public class HibernateFolder {
         entityManager.close();
     }
 
-    public void remove(int id) {
+    public void delete(int id) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         Folder folder = entityManager.find(Folder.class, id);
         removeFolderAssociationsRecursively(folder);

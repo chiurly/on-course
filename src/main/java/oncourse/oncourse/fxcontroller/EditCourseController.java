@@ -62,7 +62,7 @@ public class EditCourseController implements Initializable {
 
     @FXML
     protected void onDeleteButtonClick() {
-        hibernateCourse.remove(MainController.getSelectedCourseId());
+        hibernateCourse.delete(MainController.getSelectedCourseId());
         closeWindow();
     }
 

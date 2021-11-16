@@ -51,7 +51,7 @@ public class HibernateCourse {
         entityManager.close();
     }
 
-    public void remove(int id) {
+    public void delete(int id) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
 
         Course course = entityManager.find(Course.class, id);

@@ -19,7 +19,6 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import java.io.IOException;
 import java.net.URL;
-import java.util.List;
 import java.util.ResourceBundle;
 import java.util.Set;
 
@@ -436,7 +435,7 @@ public class MainController implements Initializable {
         alert.showAndWait();
 
         if (alert.getResult() == yes) {
-            hibernateUser.remove(SignInController.getSignedInUserId());
+            hibernateUser.delete(SignInController.getSignedInUserId());
             showSignInView();
         }
     }
